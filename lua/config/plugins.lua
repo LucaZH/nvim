@@ -20,5 +20,12 @@ return {
 
   { "nvimtools/none-ls.nvim" },
   { "jay-babu/mason-null-ls.nvim" },
+
+  {
+  "github/copilot.vim",config = function()
+    vim.api.nvim_set_keymap("i", "<Tab>", 'copilot#Accept("<CR>")', { expr = true, silent = true, noremap = true })
+  end,
+  }
+
 }
 

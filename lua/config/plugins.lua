@@ -25,7 +25,13 @@ return {
   "github/copilot.vim",config = function()
     vim.api.nvim_set_keymap("i", "<Tab>", 'copilot#Accept("<CR>")', { expr = true, silent = true, noremap = true })
   end,
-  }
+  },
+
+  {
+  "lewis6991/gitsigns.nvim", config = function()
+    require("gitsigns").setup()
+  end,
+},
 
 }
 
